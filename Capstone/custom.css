@@ -1,0 +1,139 @@
+.carouselCustom{
+    width:1000px;
+}
+.carouselImage{
+    width:300px;height:500px;
+}
+.carouselContainer{
+    width:100%;margin:0px;
+}
+.carouselItem{
+    width:100%
+}
+#shopAllButton{
+    margin-left:28%;
+    float:left;
+    width:39%;
+}
+.ProductMain{
+    margin:0;padding:0;
+    height:1200px;
+    width: 100%;
+}
+
+.ProductSideBar{
+    margin:0;padding:0;
+    height:85%;
+    float:left;
+    width: 15%;
+}
+
+.ProductContainer{
+    margin:0;padding:0;
+    height:85%;
+    float:right;
+    width: 85%;
+   
+}
+
+.ProductMenu{
+    margin:0;padding:0;
+    width:100%;
+    height:15%;
+    border: 1px solid black;
+
+}
+.ProductShow{
+    margin:0;padding:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+   
+}
+.priceLabel{
+    display:inline;
+}
+.checked {
+    color: orange;
+}
+.productInfo{
+    display:inline;
+}
+li{
+    list-style-type: none;
+
+}
+.filterOptions{
+    margin:0; padding:0;
+    float:right;
+    height:100%;
+    width:60%;
+
+}
+.ProductMenuStats{
+    margin:0; padding:0;
+    float:left;
+    width:40%;
+    height:100%;
+
+}
+.ShoppingUl{
+    padding-left:0px;
+    padding-bottom:10px;
+}
+.CateogoryDropdown{
+    background-color: white; border: 0px solid white;
+}
+.mainproduct{
+    margin-right:25%;
+    margin-left:25%;
+    margin-top:200px;
+    height:600px;
+    width: 50%;
+    
+}
+.productimage{
+    margin:0;padding:0;
+    height:100%;
+    float:left;
+    width: 50%;
+    overflow:hidden;
+}
+.imagethumbnail{
+    height:50px;
+    width:50px;
+}
+.cartProducts{
+    margin-right:10%;
+    float:right;
+    margin-top:100px;
+    height:600px;
+    width: 40%;
+    border:1px solid black;
+    overflow:scroll;
+}
+.cartItem{
+  width:100%;
+  height: 60px;
+  display:inline-block;
+}
+.SubTotals{
+  margin-right:10%;
+  float:left;
+  width: 40%;
+  height:300px;
+  border:1px solid black;
+}
+
+.CartForm{
+  margin-right:10%;
+    float:right;
+    margin-top:100px;
+    height:600px;
+    width: 40%;
+    border:1px solid black;
+}
+.MessageBox{
+    width:700px;
+    height:300px;
+}

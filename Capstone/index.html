@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="bootstrap-3.3.7\dist\css\bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="bootstrap-3.3.7\dist\js\bootstrap.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="custom.css">
+<script src="js/app.js"></script>
+<script src="js/cartCtrl.js"></script>
+<script src="js/carouselCtrl.js"></script>
+<script src="js/allProductsCtrl.js"></script>
+<script src="js/productCtrl.js"></script>
+<script src="js/contactCtrl.js"></script>
+
+
+<style>
+    .footerclass{
+        position: absolute;
+        bottom:0;
+        background-color:#333;
+        height:100px;
+        width:100%;
+        text-align: center;
+    }
+    .footerclass p,small{
+        color:#9d9d9d;
+        margin:0px;
+        padding:0px;
+    }
+</style>
+
+<header >
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cloud Store</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#shopping">shopping</a></li>
+            <li><a href="#cart">cart</a></li>
+
+          </ul>
+        </div>
+</nav>
+</header>
+<body ng-app="myApp">
+    <div ng-view></div>
+</body>
+<!-- Footer -->
+<footer class="footerclass">
+        <p><a href="#">home</a></p>
+        <p><a href="#about">about</a></p>
+        <p> <a href="#contact">contact</a></p>
+        <small>&copy; Copyright 2058, Example Corporation</small>
+      </footer>
+      <!-- Footer -->
+</html>

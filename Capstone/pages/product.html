@@ -1,0 +1,24 @@
+<style>
+
+
+</style>
+<div class="mainproduct">
+    <div class="productimage">
+            <image src="{{ProductData.imagelink}}" style="width:100%;height:100%"></image>
+    </div>
+    <div class"productdetails">
+            <h1>{{ProductData.name}}</h1>
+            <p>price:{{ProductData.price}}</p>
+           
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star" ng-class="{checked: ProductData.rating> 1}"></span>
+            <span class="fa fa-star " ng-class="{checked: ProductData.rating> 2}"></span>
+            <span class="fa fa-star" ng-class="{checked: ProductData.rating> 3}"></span>
+            <span class="fa fa-star" ng-class="{checked: ProductData.rating> 4}"></span>
+            <p>{{ProductData.description}}</p>
+            <p>In stock:<span>{{ProductData.stock}}</span></p>
+            <button ng-click="addToCart(ProductData.id)">Add to Cart</button></br>
+           <span><p>Qty:</p><input ng-model="ProductData.Qty" ng-change="updateQty(ProductData.id,ProductData.Qty)"/></span></br>
+            <button ng-click="gotoShopping()">back</button>
+    </div>
+</div>

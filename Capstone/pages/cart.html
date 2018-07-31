@@ -1,0 +1,45 @@
+<style>
+ 
+
+</style>
+<div class="CartForm">
+  <h1>Enter Shipping Details</h1>
+  <form name="cartFormSubmission">
+  First name:<br>
+  <input type="text" ng-model="firstName"name="firstname" placeholder="John" required>
+  <br>
+  Last name:<br>
+  <input type="text" ng-model="lastName" name="lastname" placeholder="Doe" required>
+  <br>
+  Phone Number:<br>
+  <input type="text" ng-model="phnNumber" placeholder="123-345-4567" required>
+  <br>
+  City:<br>
+  <input type="text" ng-model="city" placeholder="Redmond" required>
+  <br>
+  Address:<br>
+  <input  ng-model ="address" type="text" name="lastname" placeholder="1111 Ne 22 St" required>
+  <br>
+  <br>
+  <br>
+  
+  </form>
+  <button  ng-click="submitCart()">check out</button>
+</div>
+<div class="cartProducts">
+  <div ng-repeat="item in cartdata" class="cartItem">
+    <h4>{{item.name}}</h4>
+    
+    <image src="{{item.imagelink}}"  class="imagethumbnail" ></image>
+    <button ng-click="deleteFromCart(item.id);getCost()">delete</button>  
+    <p>Qty:<span><input ng-model="item.Qty" ng-change="getCost()"></span></p>
+    <p>price:<span>{{item.price}}</span></p>
+    <hr>
+  </div>
+</div>
+<div class="SubTotals">
+  <p>Subcost:<span>{{subCost}}</span></p>
+  <p>Tax:<span>{{Tax}}</span></p>
+  <p>Shipping:<span>10</span></p>
+  <p>Total:<span>{{TotalCost}}</span></p>
+</div>

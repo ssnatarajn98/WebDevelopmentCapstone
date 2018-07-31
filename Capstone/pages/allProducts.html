@@ -1,0 +1,69 @@
+<style>
+
+</style>
+<div class="ProductMain">
+    <div class="ProductMenu">
+        <div class="ProductMenuStats">
+        <h2>Controls Bar</h2>
+        <p>Currently Viewing:<span>{{currentlyviewing}}</span></p>
+        <p>Total Products in this Category <span>{{CurrTotalCnt}}</span></p>
+        <p>Products Shown: {{ProductsShown}}</p>
+    </div>
+        <div class="filterOptions">
+          
+            <input type="checkbox" name="vehicle" value="Bike" ng-click="getOnlyStocked()">In Stock only: <br>
+            <br>
+            <label >sort by:</label>
+            <select ng-model="selectedFilter" ng-change="CheckFilter()">
+                    <option value="N">None</option>
+                    <option value="P">Price</option>
+                    <option value="A">Alphabetical</option>
+                    <option value="R">Rating</option>
+            </select>
+                    
+        </div>
+    </div>
+    <div class="ProductSideBar">
+        <ul class="ShoppingUl" >
+            <li ng-repeat="item in CategoryTable" ng-model="item.show" ng-init="item.show=false"> 
+                    <a class="CateogoryDropdown" data-toggle='dropdown' class='dropdown-toggle' type='button' aria-expanded='false' ng-click="item.show=!item.show" > <span class='caret' ></span></button>
+                    <a ng-click="getSpecificProducts(item.categoryname); setName(item.categoryname);getTotalNumber(item.categoryname); ">{{item.categoryname}}</a>
+                <ul ng-show="item.show">
+                    <li  ng-repeat="subitem in item.subcategries"><a ng-click="getSpecificProducts(subitem); setName(item.categoryname);getTotalNumber(item.categoryname);">{{subitem}}</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+
+            </div>
+            <div>
+               
+                
+
+            </div>
+    </div>
+    <div class="ProductContainer">
+
+        <div class="ProductShow">
+            <div ng-repeat="product in showProducts" class="productInfo" >
+                <div ng-click="openProduct(product.id)">
+                <div class="productInfo">
+                    <h1 >{{product.name}}</h1>
+                    <image src="{{product.imagelink}}" style="width:100px;height:100px"></image>
+                </div>
+                
+                <div class="productInfo">
+                    <div ><p class="priceLabel">price: $</p><p class="priceLabel">{{product.price}}</p></div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star" ng-class="{checked: product.rating> 1}"></span>
+                    <span class="fa fa-star " ng-class="{checked: product.rating> 2}"></span>
+                    <span class="fa fa-star" ng-class="{checked: product.rating> 3}"></span>
+                    <span class="fa fa-star" ng-class="{checked: product.rating> 4}"></span>
+                </div>
+                </div>
+                <button ng-click="addToCart(product.id)">Add to Cart</button>
+            <hr>
+            </div>
+        </div>
+    </div>
+</div>
